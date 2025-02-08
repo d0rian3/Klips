@@ -1,4 +1,4 @@
-import "/styles/index.min.css";
+import "./styles/index.min.css";
 import displayDate from "./dataTracker.js";
 displayDate();
 import variable from "./variable.js";
