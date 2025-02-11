@@ -48,7 +48,7 @@ function createTaskElement(task) {
         <h2>${task.title}</h2>
         <span class="shortText">${task.text}</span>
       </div>
-      <img src="./images/DALL·E 2025-01-30 22.05.38 - A simple digital illustration representing unfinished tasks. The image features a to-do list with unchecked boxes and a clock indicating urgency. The .webp" alt="">
+      <img src="./public/images/DALL·E 2025-01-30 22.05.38 - A simple digital illustration representing unfinished tasks. The image features a to-do list with unchecked boxes and a clock indicating urgency. The .webp" alt="">
     </div>
   `;
   variable.sectionToDo.insertAdjacentHTML("beforeend", taskComponent);
