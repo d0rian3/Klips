@@ -1,6 +1,21 @@
 import variable from "./variable.js";
 
-// document.addEventListener("DOMContentLoaded", () => {
+let doneTasks = [];
+document.addEventListener("DOMContentLoaded", () => {
+  const burgerInput = document.querySelector(".burger input");
+  const droppedList = document.querySelector(".droppedList");
+
+  burgerInput.addEventListener("change", () => {
+    if (burgerInput.checked) {
+      droppedList.style.transform = "translateX(0)";
+    } else {
+      droppedList.style.transform = "translateX(-100%)";
+    }
+  });
+});
+
+variable.taskFullInfo.style.display = "none";
+
 let currentTaskId = null;
 
 function loadTasks() {
@@ -26,10 +41,12 @@ function hideTaskArticle() {
 }
 
 function createTaskElement(task) {
-  const taskComponent = `
+  const taskComponent =
+    /*html*/
+    `
       <div class="exampleTask" data-id="${task.id}">
         <div class="taskShortInfo">
-          <h2>${task.title}</h2>
+          <h2 id="exampleTaskHeader">${task.title}</h2>
           <span class="shortText">${task.text}</span>
         </div>
         <img src="../public/images/DALL·E\ 2025-01-30\ 22.05.38\ -\ A\ simple\ digital\ illustration\ representing\ unfinished\ tasks.\ The\ image\ features\ a\ to-do\ list\ with\ unchecked\ boxes\ and\ a\ clock\ indicating\ urgency.\ The\ .webp" alt="Task illustration">
@@ -39,16 +56,20 @@ function createTaskElement(task) {
 }
 
 function createFullTaskComponent(task) {
-  const fullTaskComponent = `
+  const fullTaskComponent =
+    /*html*/
+    `
       <div class="fullComponent">
         <img src="../public/images/DALL·E\ 2025-01-30\ 22.05.38\ -\ A\ simple\ digital\ illustration\ representing\ unfinished\ tasks.\ The\ image\ features\ a\ to-do\ list\ with\ unchecked\ boxes\ and\ a\ clock\ indicating\ urgency.\ The\ .webp" alt="Task illustration"/>
-        <h1>${task.title}</h1>
+        <h1 id="fullTaskHeader">${task.title}</h1>
       </div>
-      <p>
+      <p id="taskDescriptionParagraph">
         <b>TASK DESCRIPTION:</b> <br />
         ${task.text}
       </p>
+      <textarea id="changeTaskValue" placeholder="Edit your task"></textarea>
       <div class="taskButtons">
+       <img src="../public/svg/Component 3.svg" alt="" id="buttonEditTask"/>
         <img src="../public/svg/Group 87.svg" alt="" id="buttonDoneTask"/>
         <img src="../public/svg/Group 86.svg" alt="" id="buttonDeleteTask"/>
       </div>
@@ -58,6 +79,9 @@ function createFullTaskComponent(task) {
 
   const buttonDeleteTask = document.getElementById("buttonDeleteTask");
   buttonDeleteTask.addEventListener("click", deleteTask);
+
+  const buttonEditTask = document.getElementById("buttonEditTask");
+  buttonEditTask.addEventListener("click", editTask);
 }
 
 function deleteTask() {
@@ -70,25 +94,75 @@ function deleteTask() {
   }
 }
 
+function editTask() {
+  if (currentTaskId) {
+    const taskDescriptionParagraph = document.getElementById(
+      "taskDescriptionParagraph"
+    );
+    const changeTaskValue = document.getElementById("changeTaskValue");
+
+    if (!taskDescriptionParagraph || !changeTaskValue) {
+      console.error("Required elements not found");
+      return;
+    }
+
+    taskDescriptionParagraph.style.display = "none";
+    changeTaskValue.style.display = "flex";
+
+    let tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+    let task = tasks.find((t) => t.id === currentTaskId);
+
+    if (task) {
+      changeTaskValue.value = task.text;
+
+      changeTaskValue.addEventListener(
+        "blur",
+        () => {
+          task.text = changeTaskValue.value;
+          localStorage.setItem("tasks", JSON.stringify(tasks));
+          taskDescriptionParagraph.textContent = task.text;
+          taskDescriptionParagraph.style.display = "block";
+          changeTaskValue.style.display = "none";
+          loadTasks();
+        },
+        { once: true }
+      );
+    }
+  }
+}
+
+function addDoneTask() {
+  if (currentTaskId) {
+    const buttonDoneTask = document.getElementById("buttonDoneTask");
+    if (!buttonDoneTask) {
+      console.error("Done task button not found");
+      return;
+    }
+
+    buttonDoneTask.addEventListener("click", () => {});
+  }
+}
+
 variable.shortTaskList.addEventListener("click", (event) => {
+  variable.taskFullInfo.style.display = "flex";
   const taskElement = event.target.closest(".exampleTask");
+  const windowWidth = window.innerWidth;
+  if (windowWidth <= 1430) {
+    variable.myTaskShortArticle.style.flexDirection = "column";
+  }
+
   if (taskElement) {
     const taskId = taskElement.dataset.id;
     const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
     const selectedTask = tasks.find((task) => task.id === taskId);
+
     if (selectedTask) {
+      addDoneTask();
       createFullTaskComponent(selectedTask);
     }
   }
 });
 
-function addDoneTask() {
-  variable.buttonDoneTask.addEventListener("click", () => {
-    variable.shortFinishedTask.insertAdjacentHTML("beforeend", taskComponent);
-  });
-}
-
 loadTasks();
-// });
 
 export default loadTasks;
