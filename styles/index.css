@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Inter", serif;
 }
 
@@ -11,11 +11,7 @@ html {
   height: 100vh;
 }
 
-a,
-button,
-textarea,
-input,
-li {
+a {
   all: unset;
 }
 
@@ -38,7 +34,7 @@ li {
 nav {
   background-color: var(--bg2);
   -webkit-box-shadow: var(--bs);
-          box-shadow: var(--bs);
+  box-shadow: var(--bs);
   margin-bottom: 50px;
   position: relative;
 }
@@ -49,11 +45,11 @@ nav {
   display: flex;
   padding: 30px 50px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .navArticle img {
   background-color: var(--bg1);
@@ -70,6 +66,8 @@ nav {
   display: flex;
   font-size: 27px;
   font-weight: 600;
+  text-decoration: none;
+  color: black;
 }
 
 .dash {
@@ -81,8 +79,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
 .searchTask input {
@@ -109,8 +107,8 @@ nav {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   font-size: 15px;
 }
 .dateTracker span:last-child {
@@ -123,13 +121,13 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .menuToggle div {
@@ -144,24 +142,25 @@ nav {
   height: calc(100vh - 88px);
   background: #1a1a1a;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   z-index: 1000;
   gap: 20px;
 }
@@ -182,11 +181,11 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   bottom: 0.4em;
   width: 8.25em;
   height: 2.5em;
@@ -196,16 +195,16 @@ nav {
   color: #fff;
   border: 0.08em solid #fff;
   -webkit-box-shadow: 0 0.4em 0.1em 0.019em #fff;
-          box-shadow: 0 0.4em 0.1em 0.019em #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
 }
 .droppedList li span:hover,
 .droppedList a:hover {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transform: translate(0, -0.6em);
-          transform: translate(0, -0.6em);
+  transform: translate(0, -0.6em);
   -webkit-box-shadow: 0 0 0 0 #fff;
-          box-shadow: 0 0 0 0 #fff;
+  box-shadow: 0 0 0 0 #fff;
 }
 .droppedList li span:not(hover),
 .droppedList a:not(hover) {
@@ -222,7 +221,7 @@ nav {
   cursor: pointer;
   display: none;
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 
 .burger input {
@@ -239,7 +238,7 @@ nav {
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
@@ -247,28 +246,28 @@ nav {
 .burger span:nth-of-type(1) {
   top: 0px;
   -webkit-transform-origin: left center;
-          transform-origin: left center;
+  transform-origin: left center;
 }
 
 .burger span:nth-of-type(2) {
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   -webkit-transform-origin: left center;
-          transform-origin: left center;
+  transform-origin: left center;
 }
 
 .burger span:nth-of-type(3) {
   top: 100%;
   -webkit-transform-origin: left center;
-          transform-origin: left center;
+  transform-origin: left center;
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .burger input:checked ~ span:nth-of-type(1) {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   top: 0px;
   left: 5px;
 }
@@ -280,14 +279,14 @@ nav {
 
 .burger input:checked ~ span:nth-of-type(3) {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   top: 28px;
   left: 5px;
 }
 
 .burger input:checked ~ .droppedList {
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 @media (max-width: 1100px) {
@@ -323,8 +322,8 @@ nav {
   .navArticle {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .droppedList {
     top: 150px;
@@ -359,14 +358,14 @@ main aside .sideUserInfo {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 10px;
 }
 main aside .sideUserInfo img {
@@ -391,8 +390,8 @@ main aside .sideUserAbilities {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 10px;
 }
 main aside .sideUserAbilities div {
@@ -400,8 +399,8 @@ main aside .sideUserAbilities div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 15px;
   padding: 20px 15px;
   border-radius: 15px;
@@ -417,6 +416,7 @@ main aside .sideUserAbilities div:hover img {
 main aside .sideUserAbilities div:hover span,
 main aside .sideUserAbilities div:hover a {
   color: var(--bg1);
+  text-decoration: none;
 }
 main h1 {
   font-size: 30px;
@@ -428,8 +428,8 @@ main .fixator {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 main .mainArticleOfAllTasks {
   display: -webkit-box;
@@ -437,7 +437,7 @@ main .mainArticleOfAllTasks {
   display: flex;
   border: 1px solid rgba(161, 163, 171, 0.7764705882);
   -webkit-box-shadow: var(--bs);
-          box-shadow: var(--bs);
+  box-shadow: var(--bs);
   padding: 26px;
   gap: 25px;
   overflow-y: auto;
@@ -449,24 +449,25 @@ main .mainArticleOfAllTasks .sectionToDo {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-shadow: var(--bs);
-          box-shadow: var(--bs);
+  box-shadow: var(--bs);
   padding: 23px;
   border-radius: 8px;
   gap: 10px;
+  max-width: 400px;
 }
 main .mainArticleOfAllTasks .sectionToDo .toDoHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 20px;
 }
 main .mainArticleOfAllTasks .sectionToDo .toDoIcon {
@@ -474,8 +475,8 @@ main .mainArticleOfAllTasks .sectionToDo .toDoIcon {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 13px;
 }
 main .mainArticleOfAllTasks .sectionToDo .toDoIcon span {
@@ -489,8 +490,8 @@ main .mainArticleOfAllTasks .sectionToDo .toDoAddTask {
   display: flex;
   cursor: pointer;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 5px;
 }
 main .mainArticleOfAllTasks .sectionToDo .toDoAddTask span {
@@ -508,9 +509,8 @@ main .mainArticleOfAllTasks .sectionToDo .exampleTask {
   display: flex;
   gap: 20px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 400px;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   max-height: 200px;
   overflow: hidden;
 }
@@ -520,8 +520,8 @@ main .mainArticleOfAllTasks .sectionToDo .exampleTask .taskShortInfo {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 80%;
   gap: 20px;
 }
@@ -536,9 +536,9 @@ main .mainArticleOfAllTasks .sectionToDo .exampleTask .taskShortInfo span {
 }
 main .mainArticleOfAllTasks .sectionToDo .exampleTask img {
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   max-width: 100px;
   border-radius: 5px;
 }
@@ -548,8 +548,8 @@ main .mainArticleOfAllTasks .verticalTasks {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 20px;
 }
 main .mainArticleOfAllTasks .verticalTasks .taskStatusSection {
@@ -558,10 +558,10 @@ main .mainArticleOfAllTasks .verticalTasks .taskStatusSection {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-shadow: var(--bs);
-          box-shadow: var(--bs);
+  box-shadow: var(--bs);
   padding: 23px;
   gap: 10px;
   border-radius: 8px;
@@ -571,8 +571,8 @@ main .mainArticleOfAllTasks .verticalTasks .taskStatusSection .statusIcon {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 5px;
 }
 main .mainArticleOfAllTasks .verticalTasks .taskStatusSection .statusIcon span {
@@ -584,26 +584,26 @@ main .mainArticleOfAllTasks .verticalTasks .finishedTasks {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-shadow: var(--bs);
-          box-shadow: var(--bs);
+  box-shadow: var(--bs);
   padding: 23px;
   gap: 10px;
   border-radius: 8px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 main .mainArticleOfAllTasks .verticalTasks .finishedTasks .finishedIcon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   gap: 5px;
   margin-bottom: 5px;
 }
@@ -619,43 +619,60 @@ main .mainArticleOfAllTasks .verticalTasks .finishedTasks .exampleTask {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   max-width: 400px;
 }
-main .mainArticleOfAllTasks .verticalTasks .finishedTasks .exampleTask .taskShortInfo {
+main
+  .mainArticleOfAllTasks
+  .verticalTasks
+  .finishedTasks
+  .exampleTask
+  .taskShortInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 80%;
 }
-main .mainArticleOfAllTasks .verticalTasks .finishedTasks .exampleTask .taskShortInfo h2 {
+main
+  .mainArticleOfAllTasks
+  .verticalTasks
+  .finishedTasks
+  .exampleTask
+  .taskShortInfo
+  h2 {
   font-size: 13;
   font-weight: 500;
 }
-main .mainArticleOfAllTasks .verticalTasks .finishedTasks .exampleTask .taskShortInfo span {
+main
+  .mainArticleOfAllTasks
+  .verticalTasks
+  .finishedTasks
+  .exampleTask
+  .taskShortInfo
+  span {
   color: var(--c3);
   font-size: 14px;
   font-weight: 300;
 }
 main .mainArticleOfAllTasks .verticalTasks .finishedTasks .exampleTask img {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 main .popUp {
   width: 100%;
   height: 100%;
   display: none;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -679,8 +696,8 @@ main .popUpBody .headerPopUp {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 main .popUpBody .headerPopUp h3 {
@@ -705,8 +722,8 @@ main .popUpBody form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 40px;
 }
 main .popUpBody form .titleDiv,
@@ -716,8 +733,8 @@ main .popUpBody form .descDiv {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 10px;
 }
 main .popUpBody form .titleDiv input,
@@ -731,6 +748,7 @@ main .popUpBody form .descDiv textarea {
   resize: none;
   padding: 20px;
   height: 200px;
+  border: var(--borderRadius2);
 }
 main .popUpBody .doneButton {
   padding: 10px 25px;
@@ -746,6 +764,7 @@ main .popUpBody .doneButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 10px;
   gap: 20px;
 }
 .MyTaskShortArticle .shortHeaderListTask {
@@ -769,8 +788,8 @@ main .popUpBody .doneButton {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   max-width: 400px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -784,8 +803,8 @@ main .popUpBody .doneButton {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 80%;
 }
 .MyTaskShortArticle .shortTaskList .exampleTask .taskShortInfo h2,
@@ -802,9 +821,9 @@ main .popUpBody .doneButton {
 .MyTaskShortArticle .shortTaskList .exampleTask img,
 .MyTaskShortArticle .TaskFullInfo .exampleTask img {
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   max-width: 100px;
   border-radius: 5px;
 }
@@ -815,8 +834,8 @@ main .popUpBody .doneButton {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   max-width: 600px;
 }
 .TaskFullInfo .fullComponent {
@@ -824,13 +843,12 @@ main .popUpBody .doneButton {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 30px;
 }
 .TaskFullInfo .fullComponent img {
-  max-width: 250px;
-  max-height: 250px;
+  width: 200px;
   border-radius: 20px;
 }
 .TaskFullInfo p {
@@ -843,16 +861,31 @@ main .popUpBody .doneButton {
   display: flex;
   gap: 10px;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
   cursor: pointer;
+}
+
+#changeTaskValue {
+  border: var(--borderRadius);
+  resize: none;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  color: black;
+  display: none;
+}
+#changeTaskValue:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 @media (max-width: 900px) {
   main {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   aside {
     display: none;
@@ -876,16 +909,24 @@ main .popUpBody .doneButton {
   .mainArticleOfAllTasks {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media (max-disth: 620px) {
+  .MyTaskShortArticle {
+    width: 500px !important;
+  }
+  .fullComponent img {
+    width: 200px !important;
   }
 }
 @media (max-width: 510px) {
   .MyTaskShortArticle {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .popUpContainer {
     padding: 25px 30px !important;
@@ -900,8 +941,14 @@ main .popUpBody .doneButton {
     width: 150px;
     height: 150px;
   }
+  #changeTaskValue {
+    width: 300px;
+  }
 }
 @media (max-width: 410px) {
+  .MyTaskShortArticle {
+    width: 350px;
+  }
   .shortTaskList {
     padding: 5px !important;
     margin: 10px !important;
@@ -923,6 +970,9 @@ main .popUpBody .doneButton {
   }
   .TaskFullInfo .fullComponent img {
     width: 120px;
+  }
+  #changeTaskValue {
+    width: 250px;
   }
   .exampleTask {
     margin: 5px !important;
