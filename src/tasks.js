@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let tasks = [];
-let doneTasks = [];
 
 //! Работа с localStorage
 
